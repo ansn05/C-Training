@@ -7,11 +7,11 @@ using SeleniumTraining.Pages;
 namespace SeleniumTraining
 {
     [TestClass]
-    public class LoginTests : LoginPage
+    public class LoginTests //: LoginPage
     {
-        public LoginTests(IWebDriver driver) : base(driver)
-        {
-        }
+        //public LoginTests(IWebDriver driver) : base(driver)
+        //{
+        //}
 
         [TestInitialize]
         public void Init()
@@ -23,10 +23,9 @@ namespace SeleniumTraining
         public void CheckLoginPage()
         {
             BaseTest.GoTo();
-            //Assert.AreEqual(true, Driver.Instance.ElementIsPresent(By.Id("loginform")));
+            Assert.AreEqual(true, Driver.Instance.ElementIsPresent(By.Id("loginform")));
             //adding some comment
-            Assert.AreEqual(true, LoginForm);
-
+            // Assert.AreEqual(true, LoginForm);
         }
 
         [TestMethod]
