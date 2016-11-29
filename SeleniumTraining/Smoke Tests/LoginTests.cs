@@ -24,6 +24,7 @@ namespace SeleniumTraining
         {
             BaseTest.GoTo();
             //Assert.AreEqual(true, Driver.Instance.ElementIsPresent(By.Id("loginform")));
+            //adding some comment
             Assert.AreEqual(true, LoginForm);
 
         }
