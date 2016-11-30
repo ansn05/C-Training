@@ -1,31 +1,26 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
-using SeleniumTraining;
 using SeleniumTraining.Pages;
 
 namespace SeleniumTraining
 {
     [TestClass]
-    public class LoginTests //: LoginPage
+    public class LoginTests : LoginPage
     {
-        //public LoginTests(IWebDriver driver) : base(driver)
-        //{
-        //}
-
         [TestInitialize]
         public void Init()
         {
             Driver.Initialize();
+            this.Init(Driver.Instance);
         }
 
         [TestMethod]
         public void CheckLoginPage()
         {
             BaseTest.GoTo();
-            Assert.AreEqual(true, Driver.Instance.ElementIsPresent(By.Id("loginform")));
-            //adding some comment
-            // Assert.AreEqual(true, LoginForm);
+            //Assert.AreEqual(true, Driver.Instance.ElementIsPresent(By.Id("loginform")));
+            Assert.AreEqual(true, LoginForm);
+
         }
 
         [TestMethod]
